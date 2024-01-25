@@ -110,16 +110,53 @@ border: 0.01px solid #007a86;
    font-size: 0.7rem;
    margin: 6rem 0 3rem 0;
  }
+ @media only screen and (max-width: 720px) {
+  .pageright{
+   margin: 0 0 0 4rem;
+  }
+  .pageleft{
+    width: 40%;
+  }
+}
  @media only screen and (max-width: 670px) {
  .container{
   flex-direction: column-reverse;
+align-items: center;
  }
  .help ,.pageright h1,.pageright p{
   display: none;
  }
  .pageleft,.pageright{
+  margin: 0;
+  padding: 0;
   width: 100%;
  }
+ .logo{
+  margin: 4rem 0 1rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+ .logo img{
+  width: 9rem;
+  margin: 0;padding: 0;
+ }
+.pageright img{
+  width: 40rem;
+  margin: 0;padding: 0;
+}
+.pageleft{
+  text-align: center;
+  width: 70%;
+}
+ .pageright{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+ footer{
+margin-top: 3rem;
+}
 }
 
  
