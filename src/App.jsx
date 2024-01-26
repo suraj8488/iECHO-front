@@ -32,7 +32,7 @@ function App() {
                 <p>Please choose an option to continue</p>
                 <div class="continue">
                    <Buttons onClick={emailSelect} >Continue with Email</Buttons>
-                   <Buttons onClick={phoneSelect} >Continue with Email</Buttons>
+                   <Buttons onClick={phoneSelect} >Continue with Phone</Buttons>
                    <div class="divider">
                         <p>OR</p>
                     </div>
