@@ -1,0 +1,61 @@
+* {
+  padding: 0;
+  margin: 0;
+  @import url("https://fonts.googleapis.com/css2?family=Kanit:wght@700&family=Roboto&display=swap");
+  font-family: "Roboto", sans-serif;
+  background-color: #292e42;
+  color: white;
+
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #00282c;
+    border-radius: 10px;
+  }
+}
+.header {
+  text-align: center;
+}
+.header img {
+  padding: 1rem;
+  width: 10rem;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 20rem;
+}
+footer {
+  text-align: center;
+  margin-top: 2rem;
+}
+select {
+  cursor: pointer;
+  width: 15rem;
+  height: 1.5rem;
+  text-align: center;
+  border: none;
+  color: black;
+  background-color: white;
+  border: 0.08rem solid #007a86;
+  border-radius: 5px;
+}
+button {
+  color: rgb(255, 255, 255);
+  background-color: #04aa6d;
+  border: 0.08rem solid #007a86;
+  padding: 0.5rem;
+  text-align: center;
+  width: 8rem;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: green;
+}
