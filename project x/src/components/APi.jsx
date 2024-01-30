@@ -2,25 +2,21 @@ import React, { useState } from 'react';
 
 const PostRequestExample = () => {
   const [formData, setFormData] = useState({
-    password: '',
-    email: ''
+    username: 'pankaj',
+    password: '11a29c5c84b43fc0f5045a0a9bd60d65ce'
   });
 
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
-      const response = await fetch('https://demoelb.iecho.org/admin/api/v1/user/login', {
+      const response = await fetch('https://awsjenkins.echodigital.org/j_spring_security_check', {
         method: 'POST',
+        mode: 'cors',
         headers: {
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
+          'Authorization': 'Basic ' + btoa(formData.username + ':' + formData.password)
         },
         body: JSON.stringify(formData)
       });
@@ -34,19 +30,13 @@ const PostRequestExample = () => {
     } catch (error) {
       console.error('Error:', error);
     }
+
   };
 
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <div>
-          <label>password:</label>
-          <input type="text" name="name" value={formData.name} onChange={handleChange} />
-        </div>
-        <div>
-          <label>Email:</label>
-          <input type="email" name="email" value={formData.email} onChange={handleChange} />
-        </div>
+       
         <button type="submit">Submit</button>
       </form>
     </div>

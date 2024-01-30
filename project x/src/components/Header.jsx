@@ -4,8 +4,8 @@ export default function Header() {
     <>
       <div className="header">
       <img src={Logo}/>
-       <header><h1>iECHO Hotfix</h1></header> 
-      
+       <header><h1>iECHO Hotfix</h1>
+       </header> 
       </div>
     </>
   );
