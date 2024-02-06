@@ -95,13 +95,12 @@ const Example = () => {
   const handleCityChange = (e) => {
     setSelectedCity(e.target.value);
   };
-  const handleSubmit = () => {
+  
     console.log("Choose Env", selectedCountry);
     console.log("choose service:", selectedCity);
     // You can perform further actions with the selected values here...
-    let Url = `https://awsjenkins.echodigital.org/job/${selectedCity} `;
+    let Url = `https://awsjenkins.echodigital.org/job/blank-service-dev/`;
     console.log(Url);
-  };
   return (
     <div className="main">
       <h2>Choose Environment</h2>
@@ -126,7 +125,7 @@ const Example = () => {
             </option>
           ))}
       </select>
-      <button onClick={handleSubmit}>Build</button>
+
     </div>
   );
 };
