@@ -1,15 +1,23 @@
 import React, { useState } from 'react';
 
-const Accordion = ({ title, content }) => {
-  const [isActive, setIsActive] = useState(false);
-
+const Accordion = () => {
+  const AccordQa=[
+    {
+      question:"what is react",answer:"jdsn"
+    },
+    {
+      question:"what is javascript", answer:"wkdd"
+    }
+  ]
+  const [toggle,setToggle]=useState(false)
+  const handleToggle= function(){
+    setToggle(!toggle)
+  }
+  console.log(toggle)
+const question=AccordQa.map((q,index)=><h1 key={index}>{q.question}</h1>)
   return (
-    <div className="accordion-item">
-      <div className="accordion-title" onClick={() => setIsActive(!isActive)}>
-        <div>{title}</div>
-        <div>{isActive ? '-' : '+'}</div>
-      </div>
-      {isActive && <div className="accordion-content">{content}</div>}
+    <div className="container">
+    <div className="question" onClick={handleToggle}>{question}</div>
     </div>
   );
 };
