@@ -1,6 +1,8 @@
 import { useState } from "react";
 import "./App.css";
 import imgs from './assets/21517039_22.jpg'
+import Nav from "./components/Nav";
+import { Button, MantineProvider, TextInput } from '@mantine/core';
 
 function App() {
   const [count, setCount] = useState("");
@@ -26,24 +28,25 @@ function App() {
 
   }
   return (
+    <MantineProvider>
     <>
+    <Nav/>
     <div className="container">
       <img src={imgs} alt="growth image" />
       <div className="calculator">
       <h1>Increment calculator</h1>
       <h2>Current salary : {count}</h2>
-      <p>Enter your current salary</p>
-      <input onChange={handlechange} type="number" name="" id="initialn" value={count}/>
-      <p>Percentage of increment</p>
-      <input onChange={handleperchange} type="number" name="" id="percentage" value={percentage}/>
+      <input onChange={handlechange} type="number" name="" id="initialn" value={count} placeholder="Enter your current salary"/>
+      <input onChange={handleperchange} type="number" name="" id="percentage" value={percentage} placeholder="Enter Percentage Expected"/>
      <div className="calcandRemovebuttons">
       <button onClick={calcincrement}>Calculate</button>
  <button onClick={remove}>Clear</button>
  </div>
-      <h3>New Salary after increment :{result}</h3>
+      <h3>New Salary after increment <br />{result}</h3>
       </div>
       </div>
     </>
+    </MantineProvider>
   );
 }
 

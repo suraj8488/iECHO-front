@@ -6,64 +6,65 @@
   font-family: "Roboto", sans-serif;
 }
 body {
-  width: 100%;
+  height: 100vh;
   background-color: rgb(8, 146, 146);
 }
 .container {
+  height: 100vh;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+  align-items: center;
+gap: 10rem;
   border: 1px solid rgb(92, 30, 30);
   align-items: center;
 }
-.container img {
-  width: 50%;
-  height: auto;
-  border-radius: 9px;
+.container img{
+  width: 28rem;
+  border-radius: 1rem;
 }
-.calculator {
-  margin-top: 2rem;
-  background-color: #0c192a;
-  text-align: center;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
-  border-radius: 9px;
+.calculator{
+  border-radius: 1rem;
+background-color: beige;
+padding: 2rem;
+text-align: center;
 }
-h1 {
-  margin-top: 2rem;
-}
-h3 {
-  margin-bottom: 2rem;
-}
-button {
-  border: none;
-  color: #ffffff;
-  background-color: #0e20e9;
-  padding: 0.6rem;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
-}
-button  :hover{
- background-color: #030946;
-}
-.calcandRemovebuttons {
-  display: flex;
+p,h3{
+  margin: 1rem 0 1rem 0;
+  line-height: 1.5;
 
-  width: 10rem;
-  justify-content: space-between;
 }
+button{
+  margin-top: 1rem;
+}
+/* Resetting default input styles */
 input {
-  border-radius: 3px;
-  text-decoration: none;
-  height: 2rem;
-  width: 9rem;
-  font-size: 20px;
-  border: none;
+  box-sizing: border-box; /* Ensures that padding and border are included in the width */
+  width: 70%; /* Adjust as needed */
+  padding: 10px; /* Adjust as needed */
+  border: 2px solid #ccc; /* Border color */
+  margin: 1rem 0 1rem 0;
+  border-radius: 5px; /* Rounded corners */
+  font-size: 16px; /* Adjust as needed */
+  outline: none; /* Removes the default focus outline */
 }
+
+/* Styling for when input is focused */
+input:focus {
+  border-color: #007bff; /* Change border color when input is focused */
+}
+
+/* Styling for placeholder text */
+input::placeholder {
+  color: #999; /* Adjust placeholder text color */
+}
+
+/* Styling for disabled input */
+input:disabled {
+  background-color: #f4f4f4; /* Adjust background color for disabled input */
+  cursor: not-allowed; /* Change cursor style for disabled input */
+}
+.navbar{
+  display: flex;
+  justify-content: space-evenly;
+}
+
